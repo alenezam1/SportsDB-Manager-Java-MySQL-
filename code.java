@@ -17,16 +17,16 @@ public class code {
         try (Connection connection = DriverManager.getConnection(JDBC_URL)) {
             System.out.println("Connected to MySQL server successfully.");
             //Mohsens Original
-            System.out.println(" 38854546:\n");
+            System.out.println(" DB:\n");
             createAndSelectDatabase(connection);
             createTables(connection);
-            populateTableFromCSV(connection, "38854546.csv");
+            populateTableFromCSV(connection, "DB.csv");
             executeQueries(connection);
             //ojas code
-            System.out.println("\n 38866501:\n");
+            System.out.println("\n DB:\n");
             ojasCreateAndSelectDatabase(connection);
             ojasCreateTables(connection);
-            ojasPopulateTableFromCSV(connection, "38866501.csv");
+            ojasPopulateTableFromCSV(connection, "DB.csv");
             ojasExecuteQueries(connection);
 
             System.out.println("Database, tables setup, and data population completed successfully.");
@@ -37,7 +37,7 @@ public class code {
     }
 
     private static void createAndSelectDatabase(Connection connection) throws SQLException {
-        String dbName = "SCC201COURSEWORK";
+        String dbName = "DB";
         try (Statement statement = connection.createStatement()) {
             statement.executeUpdate("CREATE DATABASE IF NOT EXISTS " + dbName);
             statement.executeUpdate("USE " + dbName);
