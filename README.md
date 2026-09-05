@@ -2,7 +2,7 @@
 A Java-based application that programmatically sets up, populates, and queries two relational sports databases using JDBC and MySQL. Designed for coursework collaboration, it reads structured data from CSV files, performs SQL DDL and DML operations, and outputs query results with aggregation.
 
 ## 🔧 Features
-- Auto-creates two databases (`SCC201COURSEWORK` and `OJASSCC201COURSEWORK`)
+- Auto-creates two databases
 - Builds normalized schema with foreign key relationships
 - Populates `Sports`, `Teams`, `Players`, `Motorsport`, `Team`, and `Driver` tables from CSV
 - Performs advanced SELECT and DELETE queries with aggregation
